@@ -31,21 +31,6 @@
 
 // console.log(maskify(code));
 
-// const arr = [1, 10, 100, 1000, 10000, 5, 30, 2000, 30000];
-
-// function findLongest(arr) {
-//   let max = String(arr[0]).length;
-
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > max) {
-//       max = arr[i];
-//     }
-//   }
-//   return max;
-// }
-
-// console.log(findLongest(arr));
-
 const arr = [1, 10, 100, 1000, 10000, 5, 30, 2000, 30000];
 
 function findLongest(arr) {
@@ -60,3 +45,5 @@ function findLongest(arr) {
 }
 
 console.log(findLongest(arr));
+
+// my test
