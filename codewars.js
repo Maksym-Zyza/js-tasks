@@ -72,4 +72,49 @@
 
 // connotation(string);
 
-// ============ Definition of the first letter of the text in the alphabet
+// ============ Returns a name based on the user's birthday. The birthday will be passed as "May 3"
+// ============ The first name will come from the month, and the last name will come from the last digit of the date:
+
+function getVillainName(birthday) {
+  const m = [
+    "Evil",
+    "Vile",
+    "Cruel",
+    "Trashy",
+    "Despicable",
+    "Embarrassing",
+    "Disreputable",
+    "Atrocious",
+    "Twirling",
+    "Orange",
+    "Terrifying",
+    "Awkward",
+  ];
+  const d = [
+    "Mustache",
+    "Pickle",
+    "Hood Ornament",
+    "Raisin",
+    "Recycling Bin",
+    "Potato",
+    "Tomato",
+    "House Cat",
+    "Teaspoon",
+    "Laundry Basket",
+  ];
+  const mon = String(birthday).split(" ")[1];
+  const dd = Number(String(birthday).split(" ")[2].slice(1));
+  const mm = birthday.getMonth();
+  const firstName = m[mm];
+  const lastName = d[dd];
+  // const result1 = `The ${firstName} ${lastName}`;
+  const result = m[birthday.getMonth()] + " " + d[birthday.getDate() % 10];
+
+  console.log(mm, dd);
+  console.log(result);
+
+
+  return result;
+}
+
+getVillainName(new Date("May 13"));
